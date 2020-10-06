@@ -1,0 +1,26 @@
+<launch>
+  
+  <node
+    pkg="stage_ros" name="robot_hardware" type="stageros" output="screen"
+    args="$(find stage_ros)/world/willow-erratic.world" >
+    <!-- Enable the turtlesim key 
+    <remap from="/cmd_vel" to="/turtle1/cmd_vel"/> -->
+    
+    <!-- Enable the Program key -->
+    <remap from="/cmd_vel" to="/RobotPort_CmdVel"/> 
+    
+    <remap from="/base_scan" to="/RobotPort_Scan"/> 
+    <remap from="/odom" to="/RobotPort_Odom"/>
+
+  </node>
+
+  <!-- Laser Filter --> 
+  <node 
+    pkg="laser_filters" name="robot_laserfilter" type="scan_to_scan_filter_chain">
+    <rosparam command="load" file="$(find xyi2_bot)/config/simu_laser_config.yaml" />
+    <remap from="/scan" to="/RobotPort_Scan" />
+    <remap from="/scan_filtered" to="/RobotPort_FilterScan" />
+  </node>
+  
+
+</launch>

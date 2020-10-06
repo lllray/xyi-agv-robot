@@ -1,0 +1,9 @@
+<launch>
+
+  <node pkg="map_server" type="map_saver" name="node_map_saver" output="screen">
+    args="-f bag1 /Robot_Port_CmdVel">
+
+    <remap from="/map" to="/grpah_opt_bmap" />
+  </node>
+  
+</launch>

@@ -1,0 +1,20 @@
+<launch>
+   
+  <!-- -->
+  <include file="$(find lms1xx)/launch/LMS1xx.launch">
+ 
+  </include> 
+  
+
+  <node 
+    pkg="rosaria" name="robot_body" type="RosAria" output="screen">
+
+    <param name="port" type="string" value="/dev/ttyUSB0" />
+
+    <remap from="/robot_body/cmd_vel" to="/RobotPort_CmdVel"/> 
+    <remap from="/robot_body/pose" to="/RobotPort_Odom"/>
+  </node>
+
+
+  
+</launch>

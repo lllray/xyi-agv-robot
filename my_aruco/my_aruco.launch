@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <!-- Arguments -->
+  <!-- Show video output (both RAW and rectified) -->
+  
+
+  <!-- Camera driver -->
+  <node  name="camera" pkg="usb_cam" type="usb_cam_node" >
+  <param name="video_device"  value="/dev/video1" />
+  </node>
+
+  <!--image process-->
+ <node ns="camera" name="imageproc" pkg="image_proc" type="image_proc" output="screen"/>
+
+  <!--mvisp-->
+  <node name="myaruco" pkg="my_aruco" type="my_aruco" output="screen">
+<remap from="/image" to="/camera/image_rect"/>
+ </node>
+  
+</launch>

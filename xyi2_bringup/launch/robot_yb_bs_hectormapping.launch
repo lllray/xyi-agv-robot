@@ -1,0 +1,57 @@
+<launch>
+ 
+   <!-- Pkg: Choose Your Environment -->
+  <include file="$(find xyi2_envi)/launch/envi_mapping_lab.launch">
+
+  </include> 
+
+  <!-- Pkg: Choose Your Robot -->
+  <include file="$(find xyi2_bot)/launch/bs_bot.launch">
+ 
+  </include>  
+
+  <!-- Pkg: Algorithm Slam -->
+  <node 
+    pkg="xyi2_brain" name="robot_brain" type="xyi2_brain_main" output="screen">
+
+    <param name="enable_slam" type="bool" value="false" />
+    <param name="enbale_matching" type="bool" value="false" />
+    <param name="enbale_renewodom" type="bool" value="true" />
+    <param name="enbale_scom" type="bool" value="true" />
+
+    <param name="lsr_x" type="double" value="0.28" />
+    <param name="lsr_y" type="double" value="0.0" />
+    <param name="lsr_z" type="double" value="0.1" />
+
+    <param name="map2odom_origin_x" type="double" value="0.0" />
+    <param name="map2odom_origin_y" type="double" value="0.0" />
+  </node>
+
+  <!-- Pkg: Location -->
+  <node
+    pkg="hector_mapping" name="robot_location" type="hector_mapping" output="screen">
+    
+    <!-- hector mapping work in unkown odom's situation! -->
+    <param name="map_frame" type="string" value="map_r" />
+    <param name="odom_frame" type="string" value="odom_r" />
+    <param name="base_frame" type="string" value="base_link_r" />
+
+    <param name="map_resolution" type="double" value="0.05" />
+    <param name="map_size" type="int" value="2048" />
+
+    <param name="map_update_distance_thresh" type="double" value="0.4" />
+    <param name="map_update_angle_thresh" type="double" value="0.9" />
+    <param name="map_pub_period" type="double" value="1.0" />
+
+    <param name="laser_min_dist" type="double" value="0.1" />
+    <param name="laser_max_dist" type="double" value="30.0" />
+
+    <param name="pub_map_odom_transform" type="bool" value="true" />
+
+    <param name="pub_map_scanmatch_transform" type="bool" value="true" />
+    <param name="tf_map_scanmatch_transform_frame_name" type="string" value="hector_base_link" />
+
+    <remap from="/scan" to="/RobotPort_Scan"/>
+  </node>
+
+</launch>

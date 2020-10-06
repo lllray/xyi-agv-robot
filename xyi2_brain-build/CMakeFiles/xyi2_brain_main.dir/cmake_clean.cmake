@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/xyi2_brain_main.dir/src/main.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/thread_manage/thread_manage.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/class_tool/param_robot.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/class_tool/slamdata.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/class_tool/tfm.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/class_tool/tfm_slam.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/class_tool/hfunc.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/map/mfunc_mapexisting.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/map/struct_map.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/sensors/model_laser.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/matchings/struct_localmapping_chart.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/matchings/struct_lsr_filter.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/matchings/func_lsr_mapping.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/matchings/search_window_strategy.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/matchings/search_window_portfunc.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/matchings/al_match.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/navigation/lmap/localmap.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/navigation/gpath_plan/asearch.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/navigation/lpath_plan/dwindow_chart.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/navigation/lpath_plan/dwindow.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/navigation/rcontrol/r_controller.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/navigation/navi_func.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/navigation/navi_manage.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/graph_base/unit_kdtree.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/graph_base/unit_table.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/graph_base/unit_edge.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/graph_base/unit_node.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/graph_base/slam_procedure.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/graph_base/struct_graph.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/graph_base/graph_func.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/graph_base/graph_io/graph_io.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/com_bus/scom/scom_bsp.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/com_bus/scom/scom_function.cpp.o"
+  "CMakeFiles/xyi2_brain_main.dir/src/com_bus/scom/scom_manage.cpp.o"
+  "devel/lib/xyi2_brain/xyi2_brain_main.pdb"
+  "devel/lib/xyi2_brain/xyi2_brain_main"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/xyi2_brain_main.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

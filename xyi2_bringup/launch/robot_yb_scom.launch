@@ -1,0 +1,26 @@
+<launch>
+ 
+  <!-- Pkg: Algorithm Slam -->
+  <node 
+    pkg="xyi2_brain" name="robot_brain" type="xyi2_brain_main" output="screen">
+    
+    <param name="workspace_route" type="str" value="/home/cyb7369299/My_Workspace/xyi_v2_ws" />
+	
+    <param name="enable_slam" type="bool" value="false" />
+    <param name="enbale_matching" type="bool" value="false" />
+    <param name="enbale_renewodom" type="bool" value="true" />
+    <param name="enbale_scom" type="bool" value="true" />
+
+    <param name="lsr_x" type="double" value="0.25" />
+    <param name="lsr_y" type="double" value="0.0" />
+    <param name="lsr_z" type="double" value="0.0" />
+
+    <param name="map2odom_origin_x" type="double" value="0.0" />
+    <param name="map2odom_origin_y" type="double" value="0.0" />
+  </node>
+
+</launch>
+
+
+
+

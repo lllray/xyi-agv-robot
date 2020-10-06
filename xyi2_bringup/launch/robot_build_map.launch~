@@ -1,0 +1,10 @@
+<launch>
+
+  <node pkg="xyi2_buildmap" type="xyi2_buildmap" name="robot_buildmap" output="screen">
+    <param name="scale_linear" value="0.2" type="double"/>
+    <param name="scale_angular" value="0.1" type="double"/>
+
+    <remap from="turtlebot_teleop_keyboard/cmd_vel" to="/RobotPort_CmdVel" />
+  </node>
+  
+</launch>

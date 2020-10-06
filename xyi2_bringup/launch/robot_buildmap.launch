@@ -1,0 +1,9 @@
+<launch>
+
+  <node pkg="xyi2_buildmap" type="xyi2_buildmap" name="robot_buildmap" output="screen">
+  
+    <param name="workspace_route" type="str" value="/home/cyb7369299/My_Workspace/xyi_v2_ws" />
+
+  </node>
+  
+</launch>

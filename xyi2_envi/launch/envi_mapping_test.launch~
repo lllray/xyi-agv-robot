@@ -1,0 +1,16 @@
+<launch>
+
+  <node
+    pkg="map_server" name="robot_mapserver" type="map_server" output="screen"
+    args="$(find xyi2_envi)/map/simu_map.yaml" >
+    
+    <param name="frame_id" type="string" value="map_r" />   
+
+    <remap from="/map" to="/RobotPort_Map_s"/>
+  </node>
+
+</launch>
+
+
+
+

@@ -1,0 +1,3 @@
+rosbag record -O simu_bagdata /Robot_Port_CmdVel /Robot_Port_Scan /Robot_Port_Odom /Robot_Port_Map_S
+
+rosbag play xxx.bat

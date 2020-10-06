@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: xyi2_brain
+Description: Description of xyi2_brain
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

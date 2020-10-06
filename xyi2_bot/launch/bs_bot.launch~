@@ -1,0 +1,20 @@
+<launch>
+  
+  <!-- -->  
+  <include file="$(find lms1xx)/launch/LMS1xx.launch">
+ 
+  </include> 
+
+  <!--
+  <node name="robot_rplidar"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
+  <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>  
+  <param name="serial_baudrate"     type="int"    value="115200"/>
+  <param name="frame_id"            type="string" value="base_laser_link_r"/>
+  <param name="inverted"            type="bool"   value="false"/>
+  <param name="angle_compensate"    type="bool"   value="true"/>
+
+  <remap from="/scan" to="/RobotPort_Scan" /> 
+  </node>-->
+
+  
+</launch>

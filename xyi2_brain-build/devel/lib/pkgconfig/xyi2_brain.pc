@@ -1,0 +1,8 @@
+prefix=/home/cyb7369299/Workspace/Data_old/xyi_v2_ws/src/xyi2_brain-build/devel
+
+Name: xyi2_brain
+Description: Description of xyi2_brain
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/cyb7369299/Workspace/Data_old/xyi_v2_ws/src/xyi2_brain-build/devel/lib 
+Requires: 
